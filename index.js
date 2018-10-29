@@ -24,8 +24,8 @@ var api = new ParseServer({
   appName: 'MoodMeter',
   publicServerURL: process.env.SERVER_URL || 'http://localhost:1337/parse',
   emailAdapter: SimpleMailgunAdapter({
-    apiKey: 'key-475d9a79e4ba7db4a447084c03a1a96e',
-    domain: 'sandbox79046e0018c94c6289943caee39d6a74.mailgun.org',
+    apiKey: process.env.MAILGUN_API_KEY,
+    domain: process.env.MAILGUN_DOMAIN,
     fromAddress: 'support@moodmeterapp.com',
   }),
    // Optional only if you want to provide you own pages hosted on your web server
